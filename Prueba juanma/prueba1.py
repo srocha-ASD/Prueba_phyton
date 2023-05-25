@@ -9,13 +9,15 @@ diccionario = {}
 # Recorrer cada línea del archivo
 for line in lines:
     # Imprimir el diccionario resultante
-    print(diccionario)
+   
     # Obtener los campos de interés
     codigod = line[0:2].strip()
     codigom = line[2:5].strip()
     codigoz = line[5:7].strip()
     codigop = line[7:9].strip()
     nombred = line[19:31].strip()
+
+    print(diccionario)
 
     # Agregar los campos al diccionario
     diccionario['Codigo departamento'] = codigod
