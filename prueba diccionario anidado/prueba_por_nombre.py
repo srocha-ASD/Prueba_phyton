@@ -10,7 +10,6 @@ datos = {
     'puesto':{}
 }
 
-
 # Recorrer cada línea del archivo
 for line in lines:
     # Obtener campos de departamnetos
@@ -26,22 +25,15 @@ for line in lines:
     nombrep = line[51:91].strip()
 
     # Agregar los campos al diccionario
-    datos['departamento'][codigod] = nombred
-    datos['municipio'][codigom] = nombrem
-    datos['puesto'][codigop] = nombrep
-
-    
-
-
-
+    datos['departamento'][nombred] = codigod
+    datos['municipio'][nombrem] = codigom
+    datos['puesto'][nombrep] = codigop
 
 # Imprimir el diccionario resultante
+print("________________________________________________________________________________________________________________")
 print(datos)
 print("________________________________________________________________________________________________________________")
 print(len(datos))
 print("________________________________________________________________________________________________________________")
-print(datos['puesto']['9947'])
+print(datos['departamento']['ANTIOQUIA'])
 print("________________________________________________________________________________________________________________")
-
-
-

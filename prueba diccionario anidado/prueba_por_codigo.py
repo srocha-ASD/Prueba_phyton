@@ -5,41 +5,7 @@ with open('DIVIPOL_20220509_103027_01 (2) (1).txt', 'r', encoding='utf-8') as fi
 
 # Crear un diccionario vacío
 datos = {
-    'departamento':{
-        'ANTIOQUIA' : "01",
-        'ATLANTICO' : "03",
-        'BOLIVAR ' : "05",
-        'BOYACA' : "07",
-        'CALDAS' : "09",
-        'CAUCA' : "11",
-        'CESAR' : "12",
-        'CORDOBA' : "13",
-        'CUNDINAMARCA' : "15",
-        'BOGOTA D.C' : "16",
-        'CHOCO ' : "17",
-        'HUILA ' : "19",
-        'MAGDALENA ' : "21",
-        'NARI�O ' : "23",
-        'RISARALDA ' : "24",
-        'QUINDIO ' : "26",
-        'SANTANDER ' : "27",
-        'SUCRE ' : "28",
-        'TOLIMA ' : "29",
-        'VALLE ' : "31",
-        'ARAUCA ' : "40",
-        'CAQUETA ' : "44",
-        'CASANARE ' : "46",
-        'LA GUAJIRA ' : "48",
-        'GUAINIA ' : "50",
-        'META ' : "52",
-        'GUAVIARE ' : "54",
-        'SAN ANDRES ' : "56",
-        'AMAZONAS ' : "60",
-        'PUTUMAYO ' : "64",
-        'VAUPES ' : "68",
-        'VICHADA ' : "72",
-        'CONSULADOS ' : "88"
-    },
+    'departamento':{},
     'municipio':{},
     'puesto':{}
 }
@@ -59,6 +25,7 @@ for line in lines:
     nombrep = line[51:91].strip()
 
     # Agregar los campos al diccionario
+    datos['departamento'][codigod] = nombred
     datos['municipio'][codigom] = nombrem
     datos['puesto'][codigop] = nombrep
 
@@ -68,6 +35,9 @@ print(datos)
 print("________________________________________________________________________________________________________________")
 print(datos['departamento'])
 print("________________________________________________________________________________________________________________")
+"""
+print(datos['departamento']['01'])
+print("________________________________________________________________________________________________________________")"""
 
 
-    
+
