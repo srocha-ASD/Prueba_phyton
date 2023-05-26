@@ -26,18 +26,21 @@ for line in lines:
 
     # Agregar los campos al diccionario
     datos['departamento'][codigod] = nombred
-    datos['municipio'][codigom] = nombrem
-    datos['puesto'][codigop] = nombrep
+    datos['municipio'][f'{codigod}{codigom}'] = nombrem
+    datos['puesto'][f'{codigom}{codigop}'] = nombrep
 
+cantidad_datos = len(datos['puesto'])
 # Imprimir el diccionario resultante
-print("________________________________________________________________________________________________________________")
+print("\n")
 print(datos)
-print("________________________________________________________________________________________________________________")
-print(datos['departamento'])
-print("________________________________________________________________________________________________________________")
+print("\n")
+print(cantidad_datos)
+print("\n")
+
 """
-print(datos['departamento']['01'])
-print("________________________________________________________________________________________________________________")"""
+print(datos['departamento'])
+print("\n")
+print(datos['puesto']['5900504'])
+print("\n")
 
-
-
+"""
