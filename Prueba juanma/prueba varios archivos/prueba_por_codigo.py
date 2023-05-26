@@ -1,12 +1,15 @@
 # Abrir el archivo en modo lectura
-with open('DIVIPOL_20220509_103027_01 (2) (1).txt', 'r') as file:
+with open('DIVIPOL_20220509_103027_01 (2) (1).txt', 'r', encoding='utf-8') as file:
     # Leer las líneas del archivo
     lines = file.readlines()
 
 # Crear un diccionario vacío
-departamentos = {}
-municipios = {}
-puesto = {}
+datos = {
+    'departamento':{},
+    'municipio':{},
+    'puesto':{}
+}
+
 
 # Recorrer cada línea del archivo
 for line in lines:
@@ -18,21 +21,27 @@ for line in lines:
     codigom = line[2:5].strip()
     nombrem = line[21:51].strip()
 
-    # Obtener campos de municipio
-    codigop = line[7:9].strip()
-    nombrep = line[51:81].strip()
-
+    # Obtener campos de puestos
+    codigop = line[5:9].strip()
+    nombrep = line[51:91].strip()
 
     # Agregar los campos al diccionario
-    departamentos[f"{nombred}"] = codigod
-    municipios[f"{nombrem}"] = codigom
-    puesto[f"{nombrep}"] = codigop
+    datos['departamento'][codigod] = nombred
+    datos['municipio'][codigom] = nombrem
+    datos['puesto'][codigop] = nombrep
+
+    
+
+
 
 
 # Imprimir el diccionario resultante
-print(departamentos)
+print(datos)
 print("________________________________________________________________________________________________________________")
-print(municipios)
+print(len(datos))
 print("________________________________________________________________________________________________________________")
-print(puesto)
+print(datos['puesto']['9947'])
+print("________________________________________________________________________________________________________________")
+
+
 
