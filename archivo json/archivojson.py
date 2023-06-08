@@ -53,5 +53,4 @@ with open('DIVIPOL_20220509_103027_01 (2) (1).txt', 'r', encoding='utf-8') as fi
 
  # Escribir los datos en un archivo JSON
 with open('datos_J.json', 'w', encoding='utf-8') as file:
-    
     json.dump(datos, file,ensure_ascii=False ,indent=4)
